@@ -1,4 +1,14 @@
+from flask import Flask
+app=Flask(__name__)
+@app.route('/')
+def home():return "alive"
+def run_web():
+ port=int(__import__('os').environ.get("PORT",10000))
+ app.run(host="0.0.0.0",port=port)
+import threading
+threading.Thread(target=run_web,daemon=True).start()
 import yfinance as yf, telebot, os, time, threading
+
 import pandas as pd
 
 TOKEN = os.environ.get("BOT_TOKEN")
