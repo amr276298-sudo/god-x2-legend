@@ -4,4 +4,4 @@ pandas==2.0.3
 numpy==1.26.4
 flask==2.3.3
 pytz==2024.1
-lxml==15.2.2
+lxml==5.2.2
